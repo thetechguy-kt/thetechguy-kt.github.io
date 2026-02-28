@@ -1,61 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>TheTechGuy | Portfolio</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheTechGuy | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Reset & Base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
+      font-family: 'Roboto', sans-serif;
       background-color: #0d1117;
       color: #c9d1d9;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 40px;
+      line-height: 1.6;
     }
-    h1 {
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    header h1 {
+      font-size: 3rem;
       color: #58a6ff;
+      margin-bottom: 10px;
     }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
+    header p {
+      font-size: 1.2rem;
+      color: #8b949e;
     }
+
+    /* Projects Grid */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    /* Project Card */
     .project {
-      margin-bottom: 20px;
-      padding: 15px;
-      background: #161b22;
-      border-radius: 8px;
+      background-color: #161b22;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(88, 166, 255, 0.2);
+    }
+    .project h3 {
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+    .project p {
+      color: #c9d1d9;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+    .project a {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #58a6ff;
+      color: #0d1117;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .project a:hover {
+      background: #1f6feb;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #8b949e;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>TheTechGuy</h1>
-  <p>Programmer and Ethical Hacker | Python Flask Apps | Offline and Online Applications | Streamlit Application</p>
+  <div class="container">
 
-  <h2>Projects</h2>
+    <header>
+      <h1>TheTechGuy</h1>
+      <p>Programmer & Ethical Hacker | Python & Flask Apps | Offline and Online Applications | Streamlit Applications</p>
+    </header>
 
-  <div class="project">
-    <h3>Interview Queue Caller System</h3>
-    <p>A Simple Interview Queue Caller System made out of Tkinter and Python.</p>
-    <a href="https://github.com/thetechguy-kt/interview-caller-system" target="_blank">
-      View on GitHub →
-    </a>
-  </div>
+    <section class="projects">
 
-  <div class="project">
-    <h3>Interview Queue Caller System - Online</h3>
-    <p>An Online Interview Queue Caller System built with Python and Tkinter.</p>
-    <a href="https://github.com/thetechguy-kt/interview-caller-system_online" target="_blank">
-      View on GitHub →
-    </a>
-  </div>
+      <div class="project">
+        <h3>Interview Queue Caller System</h3>
+        <p>A simple offline Interview Queue Caller System using Tkinter and Python.</p>
+        <a href="https://github.com/thetechguy-kt/interview-caller-system" target="_blank">View on GitHub →</a>
+      </div>
 
-    <div class="project">
-    <h3>Restaurant Table and Order Management System</h3>
-    <p>A simple, offline restaurant management system with table tracking, order taking, kitchen workflow, and billing — built using Python and Streamlit.</p>
-    <a href="https://github.com/thetechguy-kt/restaurant-management-system" target="_blank">
-      View on GitHub →
-    </a>
+      <div class="project">
+        <h3>Interview Queue Caller System - Online</h3>
+        <p>An online version of the Interview Queue Caller System built with Python and Tkinter.</p>
+        <a href="https://github.com/thetechguy-kt/interview-caller-system_online" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="project">
+        <h3>Restaurant Table and Order Management System</h3>
+        <p>A simple offline restaurant management system with table tracking, order taking, kitchen workflow, and billing — built using Python and Streamlit.</p>
+        <a href="https://github.com/thetechguy-kt/restaurant-management-system" target="_blank">View on GitHub →</a>
+      </div>
+
+    </section>
+
+    <footer>
+      &copy; 2026 TheTechGuy | <a href="https://github.com/thetechguy-kt" target="_blank" style="color:#58a6ff;">GitHub</a>
+    </footer>
+
   </div>
 
 </body>
