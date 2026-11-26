@@ -21,6 +21,6 @@ permalink: /about/
   <h2>Elsewhere</h2>
   <ul>
     <li><strong>GitHub:</strong> <a href="https://github.com/thetechguy-kt" target="_blank">@thetechguy-kt</a></li>
-    <li><strong>Discord:</strong> <code>k_dude.28</code></li>
+    <li><strong>Discord:</strong> <code>k.dude_28</code></li>
   </ul>
 </div>
