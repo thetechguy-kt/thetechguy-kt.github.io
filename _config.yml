@@ -1,3 +1,4 @@
 title: PingKarthik
-description: Notes, projects, and builds.
+description: A personal blog by Karthik where I post and share notes on hardware, Linux, code, and random late-night builds and thoughts.
+url: "https://pingkarthik.me"
 permalink: /blog/:year/:month/:day/:title/

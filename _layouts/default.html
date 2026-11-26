@@ -3,23 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #222; }
-    header { border-bottom: 1px solid #ddd; margin-bottom: 2rem; padding-bottom: 1rem; }
-    a { color: #0066cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    pre { background: #f4f4f4; padding: 1rem; overflow-x: auto; border-radius: 6px; }
-  </style>
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <header>
-    <h1><a href="/">{{ site.title }}</a></h1>
-    <p>{{ site.description }}</p>
-  </header>
+  <div class="container">
+    <header class="site-header">
+      <div class="header-top">
+        <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+        <nav>
+          <a href="{{ '/' | relative_url }}">Posts</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+          <a href="https://github.com/thetechguy-kt" target="_blank">GitHub</a>
+        </nav>
+      </div>
+      <p class="site-desc">{{ site.description }}</p>
+    </header>
 
-  <main>
-    {{ content }}
-  </main>
+    <main>
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 PingKarthik • Built with HTML, CSS & Markdown on GitHub Pages.</p>
+    </footer>
+  </div>
 </body>
 </html>
